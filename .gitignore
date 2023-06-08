@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+
+#Deps
+node_modules
+
+# Production
+release
+build
+dist
+public
+dist-*
+
+# Editor directories and files
+.vscode/.debug.env
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Env files
+*.env
+.env.local
+.env.development.local
+.env.test.local 
+.env.production.local
+.env
+
+#lockfile
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
