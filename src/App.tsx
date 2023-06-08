@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Home from "./pages/Home";
 import "./App.css";
 
-const trackingId: string = "G-E2S3XJ28TJ"; // Replace with your Google Analytics tracking ID
+const trackingId: string = "G-7W12S7H1TR"; // Replace with your Google Analytics tracking ID
 reactGa.initialize(trackingId);
 
 export default function App() {
