@@ -24,6 +24,6 @@ jobs:
 
     - name: Build
       run: |
-        pnpm install
-        pnpm run build
-        pnpm run preview
+        npm install
+        npm run build
+        npm run preview
