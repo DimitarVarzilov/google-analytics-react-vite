@@ -1,15 +1,15 @@
 import { Route, Link, BrowserRouter, Routes } from "react-router-dom";
-import reactGa from "react-ga";
+import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import Home from "./pages/Home";
 import "./App.css";
 
-const trackingId: string = "G-7W12S7H1TR"; // Replace with your Google Analytics tracking ID
-reactGa.initialize(trackingId);
+const trackingId: string = "G-7W12S7H1TR"; // Replace with your Google Analytics MEASUREMENT ID
+ReactGA.initialize(trackingId);
 
 export default function App() {
   useEffect(() => {
-    reactGa.pageview(window.location.pathname);
+    ReactGA._gaCommandSendPageviewParameters(window.location.pathname);
   }, []);
 
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import reactGa from "react-ga";
+import ReactGA from "react-ga4";
 
 const Home = () => {
   const [count, setCount] = useState(0);
@@ -12,7 +12,7 @@ const Home = () => {
         <button
           onClick={() => {
             setCount((count) => count + 1);
-            reactGa.event({
+            ReactGA.event({
               category: "Button",
               action: "Click",
               label: "Click Me",
