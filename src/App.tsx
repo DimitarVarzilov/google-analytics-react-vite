@@ -9,7 +9,7 @@ ReactGA.initialize(trackingId);
 
 export default function App() {
   useEffect(() => {
-    ReactGA._gaCommandSendPageviewParameters(window.location.pathname);
+    ReactGA._gaCommandSendPageviewParameters(window.location.pathname + window.location.search);
   }, []);
 
   return (
