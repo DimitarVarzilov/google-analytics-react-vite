@@ -11,9 +11,16 @@ function RegisterPage() {
         category: "Form",
         action: "Submit",
         label: "Registration Form",
+        value: 1,
       });
       console.log("Registration successful");
     } else {
+      GA4.event({
+        category: "Form",
+        action: "Submit",
+        label: "Registration Form",
+        value: 0,
+      });
       console.log("Registration failed");
     }
   };
