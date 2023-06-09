@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <img className="logo" src="./vite.svg" alt="Vite icon" />
-      <img className="logo" src="./react.svg" alt="React icon" />
+      <img className="logo" src="./react.png" alt="React icon" />
       <h1>Vite + React</h1>
       <div className="card">
         <button
@@ -26,9 +26,6 @@ const Home = () => {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   );
 };
