@@ -10,7 +10,7 @@ function RegisterPage() {
       GA4.event({
         category: "Form",
         action: "Submit",
-        label: "Registration Form",
+        label: "Registration successful",
         value: 1,
       });
       console.log("Registration successful");
@@ -18,7 +18,7 @@ function RegisterPage() {
       GA4.event({
         category: "Form",
         action: "Submit",
-        label: "Registration Form",
+        label: "Registration failed",
         value: 0,
       });
       console.log("Registration failed");
