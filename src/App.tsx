@@ -1,22 +1,14 @@
 import { Route, Link, BrowserRouter, Routes } from "react-router-dom";
-import ReactGA from "react-ga4";
-import { useEffect } from "react";
 import Home from "./pages/Home";
 import "./App.css";
 import Register from "./pages/Register";
-
-const trackingId: string = "G-7W12S7H1TR"; // Replace with your Google Analytics MEASUREMENT ID
-ReactGA.initialize(trackingId);
+import { activateGA4, deactivateGA4 } from "./utils";
 
 export default function App() {
-  useEffect(() => {
-    ReactGA._gaCommandSendPageviewParameters(
-      window.location.pathname + window.location.search
-    );
-  }, []);
-
   return (
     <>
+      <button onClick={() => activateGA4()}>Enable GA4</button>
+      <button onClick={() => deactivateGA4()}>Deactivate GA4</button>
       <BrowserRouter>
         <nav>
           <ul>
