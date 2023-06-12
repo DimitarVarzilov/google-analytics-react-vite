@@ -9,7 +9,6 @@ node_modules
 release
 build
 dist
-public
 dist-*
 
 # Editor directories and files
