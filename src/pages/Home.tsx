@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import GA4 from "react-ga4";
 import { Profiler } from "react";
-import { Interaction as SchedulerInteraction } from "../../node_modules/.pnpm/@types+scheduler@0.16.3/node_modules/@types/scheduler/tracing";
 
 const Home = () => {
   const [count, setCount] = useState(0);
@@ -17,7 +16,7 @@ const Home = () => {
     baseDuration: number,
     startTime: number,
     commitTime: number,
-    interactions: Set<SchedulerInteraction>
+    interactions: Set<any>
   ): void {
     // Aggregate or log render timings...
     console.log("id -->", id);
