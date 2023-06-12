@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import "./App.css";
 import Register from "./pages/Register";
 import { activateGA4, deactivateGA4 } from "./utils";
+import CookieConsent from "react-cookie-consent";
 
 export default function App() {
   return (
@@ -24,6 +25,15 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Register" element={<Register />} />
         </Routes>
+        <CookieConsent
+          enableDeclineButton
+          flipButtons
+          onAccept={activateGA4}
+          onDecline={deactivateGA4}
+          hideOnDecline
+        >
+          This website uses cookies
+        </CookieConsent>
       </BrowserRouter>
     </>
   );
