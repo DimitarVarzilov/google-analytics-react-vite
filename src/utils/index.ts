@@ -1,8 +1,7 @@
 import GA4 from "react-ga4";
 import { Cookies } from "react-cookie-consent";
 import { GA4_TRACKING_ID } from "../constants";
-import { DebugBear } from "debugbear"
-
+import { DebugBear } from "debugbear";
 //check if cookie consent is accepted before initializing GA4
 const checkCookieConsent = () => {
     const allCookies = Cookies.get();
@@ -16,8 +15,8 @@ const activateGA4 = () => {
         return;
     }
     else {
-        //check if GA4 is already loaded and initialized
-        if (!GA4._hasLoadedGA && !GA4.isInitialized) {
+        //check if GA4 is not already initialized
+        if (!GA4.isInitialized) {
             GA4.initialize(GA4_TRACKING_ID);
         }
     }
@@ -34,11 +33,13 @@ const deactivateGA4 = () => {
         }
     });
     //}
+
 }
 
 // const testPage = () => {
 //     const pageId = 107034
-//     const debugbear = new DebugBear("ZaqslVZ7MTnIb9Ly6HCIeqR2D")
+//     // const debugbear = new DebugBear("ZaqslVZ7MTnIb9Ly6HCIeqR2D")
+//     const debugbear = new DebugBear(import.meta.env.DEBUGBEAR_API_KEY)
 //     debugbear.pages.analyze(pageId).then((analysis) => {
 //         analysis.waitForResult().then(() => {
 //             console.log('Test complete, view results here: ' + analysis.url)

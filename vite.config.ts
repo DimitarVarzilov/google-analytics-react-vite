@@ -11,5 +11,7 @@ export default defineConfig({
 	},
 	server: {
 		open: true,
-	},
+	}, optimizeDeps: {
+		include: ["debugbear"],
+	}
 });
